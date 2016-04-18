@@ -1,6 +1,6 @@
 {
   "name": "condensation-particle-tests",
-  "version": "0.4.0",
+  "version": "0.4.0-rc1",
   "description": "Tests for condensation particles",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/SungardAS/condensation-particle-tests#readme",
   "dependencies": {
-    "condensation": "^0.4.12",
+    "condensation": "0.4.13-rc0",
     "lodash": "^4.11.1"
   }
 }

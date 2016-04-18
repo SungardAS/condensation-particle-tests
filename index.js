@@ -87,7 +87,7 @@ CondensationTests.prototype.processParticle = function(particleType,particlePath
  * @param {Object} [options.logicalId] the Logical ID for the particle
  * @param {Object} [options.hArgs] Handlebars arguments to use for processing the particle
  * @param {Boolean} [options.validateJson=true] Whether to valide the output as valid JSON
- * @param {String} [options.assertType] How to assert against the fixture. If options.validateJson is true then assertType will be deepStrictEqual. If false then equal
+ * @param {String} [options.assertType] How to assert against the fixture. If options.validateJson is true then assertType will be deepEqual. If false then equal
  * @return {String} The processed particle
  *
  */
@@ -99,7 +99,7 @@ CondensationTests.prototype.testParticle = function(particleType,particlePath,fi
 
   var result = this.processParticle(particleType,particlePath,options);
 
-  var assertType = "deepStrictEqual";
+  var assertType = "deepEqual";
   if (!options.validateJson) {
     assertType = "equal"
   }

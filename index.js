@@ -12,7 +12,7 @@ var path = require("path");
  */
 var CondensationTests = function(options) {
   options = options || {};
-  var condensation = this.condensation = options.condensation || new require('condensation/lib/condensation');
+  var condensation = this.condensation = options.condensation || new (require('condensation/lib/condensation'))();
 };
 
 /*

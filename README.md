@@ -41,6 +41,9 @@ Compile and execute handlebars processing for a given particle
 
 @param `{Boolean}` [options.validateJson=true] Whether to valide the output as valid JSON
 
+@param `{Boolean}` [options.expectError=false] If `true` will expect the
+test to throw an error
+
 @return `{String}` The processed particle
 
 

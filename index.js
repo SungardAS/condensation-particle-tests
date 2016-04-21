@@ -47,6 +47,7 @@ CondensationTests.prototype.hOptsFunc = function() {
  * @param {Object} [options.logicalId] the Logical ID for the particle
  * @param {Object} [options.hArgs] Handlebars arguments to use for processing the particle
  * @param {Boolean} [options.validateJson=true] Whether to valide the output as valid JSON
+ * @param {Boolean} [options.expectError=false] If `true` expect the test to throw an error
  * @return {String} The processed particle
  *
  */

@@ -1,7 +1,7 @@
 #condensation-particle-tests
 Utilities to test condensation particles
 
-![condensation-particle-tests][condensation-particle-tests-image]
+![condensation][condensation-image]
 
 [![NPM][npm-image]][npm-url]
 [![Gitter][gitter-image]][gitter-url]

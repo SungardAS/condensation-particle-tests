@@ -1,0 +1,10 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+## 0.5.0 - 2016-04-21
+### Added
+- Initial release to work with [condensation][condensation-url] ^0.5.0
+
+
+[condensation-url]: https://github.com/SungardAS/condensation

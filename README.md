@@ -26,12 +26,14 @@ Utilities to test condensation particles
 
 @param `{Object}` [options.condensation] Condensation object to use for tests.
 
-### processParticle
+### testParticle
 Compile and execute handlebars processing for a given particle
 
 @param `{String}` particleType Name of the particle type
 
 @param `{String}` particlePath Relative path to the particle
+
+@param `{Object}` fixture A fixtue to compare the processed output to
 
 @param `{Object}` [options] processing configuration
 
@@ -41,11 +43,9 @@ Compile and execute handlebars processing for a given particle
 
 @param `{Boolean}` [options.validateJson=true] Whether to valide the output as valid JSON
 
-@param `{Boolean}` [options.expectError=false] If `true` will expect the
-test to throw an error
+@param `{String}` [options.assertType] How to assert against the fixture. If options.validateJson is true then assertType will be deepEqual. If false then equal
 
 @return `{String}` The processed particle
-
 
 ## Sungard Availability Services | Labs
 [![Sungard Availability Services | Labs][labs-image]][labs-github-url]

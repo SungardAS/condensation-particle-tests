@@ -1,4 +1,3 @@
-var Condensation = require('condensation/lib/condensation');
 var _ = require("lodash");
 var assert = require("assert");
 var path = require("path");
@@ -13,7 +12,7 @@ var path = require("path");
  */
 var CondensationTests = function(options) {
   options = options || {};
-  var condensation = this.condensation = options.condensation || new Condensation();
+  var condensation = this.condensation = options.condensation || new require('condensation/lib/condensation');
 };
 
 /*

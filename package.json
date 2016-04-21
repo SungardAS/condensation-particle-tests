@@ -1,6 +1,6 @@
 {
   "name": "condensation-particle-tests",
-  "version": "0.4.0-rc2",
+  "version": "0.4.0-rc3",
   "description": "Tests for condensation particles",
   "main": "index.js",
   "scripts": {

@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/SungardAS/condensation-particle-tests#readme",
   "dependencies": {
-    "condensation": "0.4.13-rc0",
     "lodash": "^4.11.1"
+  },
+  "peerDependencies": {
+    "condensation": "0.4.13-rc0"
   }
 }

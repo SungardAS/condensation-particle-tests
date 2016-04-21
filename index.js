@@ -1,7 +1,6 @@
+var Condensation = require('condensation/lib/condensation');
 var _ = require("lodash");
 var assert = require("assert");
-var sections = require('condensation/lib/condensation/template-helpers/sections');
-var Condensation = require('condensation/lib/condensation');
 var path = require("path");
 
 
@@ -14,14 +13,7 @@ var path = require("path");
  */
 var CondensationTests = function(options) {
   options = options || {};
-
-  var condensation = options.condensation || new Condensation();
-
-  this.cOpts = {
-    particleLoader: condensation.particleLoader,
-    handlebars: condensation.handlebars
-  };
-
+  var condensation = this.condensation = options.condensation || new Condensation();
 };
 
 /*
@@ -33,7 +25,14 @@ var CondensationTests = function(options) {
 CondensationTests.prototype.hOptsFunc = function() {
   return {
     data: {
-      _file: {path: [process.cwd(),'particles','cftemplates','____test_template'].join(path.sep) }
+      _file: {
+        path: [
+          this.condensation.options.projectFullPath,
+          'particles',
+          'cftemplates',
+          '____test_template'
+        ].join(path.sep)
+      }
     },
     hash: {}
   };
@@ -62,7 +61,7 @@ CondensationTests.prototype.processParticle = function(particleType,particlePath
   hOpts.hash.logicalId = options.logicalId;
   hOpts.hash = _.merge(hOpts.hash,options.hArgs);
 
-  var result = sections[particleType].helper.apply(this.condensation, [null, particlePath, null, hOpts, this.cOpts]);
+  var result = this.condensation.helpers[particleType].apply(null,[particlePath, hOpts]);
 
   if (options.validateJson) {
     try {
@@ -97,14 +96,21 @@ CondensationTests.prototype.testParticle = function(particleType,particlePath,fi
     {validateJson: true}
   );
 
-  var result = this.processParticle(particleType,particlePath,options);
 
-  var assertType = "deepEqual";
-  if (!options.validateJson) {
-    assertType = "equal"
+  if (options.expectError) {
+    assert.throws(this.processParticle.bind(this,particleType,particlePath,options));
+  }
+  else {
+    var assertType = "deepEqual";
+    if (!options.validateJson) {
+      assertType = "equal"
+    }
+
+    var result = this.processParticle(particleType,particlePath,options);
+
+    assert[assertType](result, fixture);
   }
 
-  assert[assertType](result, fixture);
 };
 
 

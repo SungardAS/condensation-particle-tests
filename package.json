@@ -1,6 +1,6 @@
 {
   "name": "condensation-particle-tests",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Tests for condensation particles",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,6 @@
     "lodash": "^4.11.1"
   },
   "peerDependencies": {
-    "condensation": "0.5.0"
+    "condensation": "^0.5.0"
   }
 }

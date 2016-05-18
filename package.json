@@ -1,6 +1,9 @@
 {
   "name": "condensation-particle-tests",
-  "version": "0.5.1",
+  "version": "0.5.2",
+  "publishConfig": {
+    "tag": "latest"
+  },
   "description": "Tests for condensation particles",
   "main": "index.js",
   "scripts": {
@@ -20,9 +23,9 @@
   },
   "homepage": "https://github.com/SungardAS/condensation-particle-tests#readme",
   "dependencies": {
-    "lodash": "^4.11.1"
+    "lodash": "^4.12.0"
   },
   "peerDependencies": {
-    "condensation": "^0.5.0"
+    "condensation": "~0.5.0"
   }
 }

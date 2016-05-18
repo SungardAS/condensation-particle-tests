@@ -53,8 +53,8 @@ CondensationTests.prototype.hOptsFunc = function() {
  */
 CondensationTests.prototype.processParticle = function(particleType,particlePath,options) {
   options = _.merge(
-    options,
-    {validateJson: true}
+    {validateJson: true},
+    options
   );
 
   var hOpts = this.hOptsFunc();
@@ -92,8 +92,8 @@ CondensationTests.prototype.processParticle = function(particleType,particlePath
  */
 CondensationTests.prototype.testParticle = function(particleType,particlePath,fixture,options) {
   options = _.merge(
-    options,
-    {validateJson: true}
+    {validateJson: true},
+    options
   );
 
 

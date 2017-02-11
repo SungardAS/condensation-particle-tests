@@ -28,7 +28,7 @@ describe("testParticle", function() {
       "parameter",
       "test_param",
       require("./fixtures/particles/test_param_1"),
-      {hOpts: {logicalId: "Parameter1" } }
+      {hOpts: {hash: {logicalId: "Parameter1" }} }
     );
   });
 

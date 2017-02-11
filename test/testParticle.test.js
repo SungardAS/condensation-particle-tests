@@ -8,7 +8,7 @@ describe("testParticle", function() {
       cTests.testParticle(
         "parameter",
         "test_param",
-        {}
+        {},
         {hOpts: {logicalId: "Parameter1"}}
       );
   });

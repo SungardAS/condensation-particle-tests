@@ -1,0 +1,19 @@
+language: node_js
+sudo: false
+node_js:
+  - latest
+  - 6
+  - 4
+env:
+  - CONDENSATION_VERSION=^0.5.0
+  - CONDENSATION_VERSION=^0.6.0
+before_install:
+  - npm install condensation@$CONDENSATION_VERSION
+deploy:
+  provider: npm
+  email: as.us.labs@sungardas.com
+  api_key:
+    secure: i+EGHnq39g/01uqcIk18KPlnYm3pxLf8ILMyPiamvpkS43hRZ2sS8JnqQOoZ/2+ddubr+u84WhcPtSWGU7tg6j9CyGogl/gPD9F/SMFXbJR+AcfsUVQLE66DK9OxjPHxIapuKt5suDs9XhE5J9Z2bDjK/8pMuN2lFdsuEaDCgdw7yiTEqaRxWX0aoRqlf4oKGuqKedJeI9W3iLTBfX44KOHCZwJwGu84NCrhYwR/o7PdMDouUIdDQst3JxfZiBvqIbP2FsUuK5mEFTmOIqjWlPJIWq1pbOaPMt5jBOHwUwphCE93XdlNu5rEWKpJOLcb2+/V6sY793zpo4fGXy9lgHz4gTf3f06CmF/2rtss3MCIO85YpLJW1FZDv3/ooQELJQDSkRM/227A5gLLuwg+W5Zma5cGWEuRtYNoEzSSkEp0nV+WswF9GeNRvJx7euQDnyGak49MfS8WW93lImlassh2/gd1q+/fDyUTtA9D6bbn19Q0Qwofg6NM0AWw3NmmTPh+aJ4E5ZWLc00LK44S1t2Ib4OZ1hxmDkRmQhqqF0y5/+74KEeNVR90/xAo+axctzPUV3BSKcQb5JBEWsr5xYxPyMvWOzoA/crUiDo1qKvxA6rAOn2344E6ECIr6T1FtKljTRUajzeaU7B+UNHrzNg9QK9pMIWO7tgIFYm25UM=
+  on:
+    tags: true
+    repo: SungardAS/condensation-particle-tests

@@ -7,7 +7,7 @@
   "description": "Tests for condensation particles",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha \"./test/**/*.test.js\""
   },
   "repository": {
     "type": "git",
